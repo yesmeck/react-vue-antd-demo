@@ -17,6 +17,8 @@ module.exports = {
     hot: true
   },
 
+  devtool: 'source-map',
+
   module: {
     rules: [
       {
@@ -30,6 +32,10 @@ module.exports = {
         options: {
           vue: './vue.config.js'
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
       }
     ]
   },
